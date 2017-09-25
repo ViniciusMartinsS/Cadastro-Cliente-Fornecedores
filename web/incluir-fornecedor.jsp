@@ -1,3 +1,4 @@
+<%@include file="WEB-INF/jspf/header_1.jspf"%>
 <%@page import="br.com.fatecpg.controle.ControleF"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,8 +9,6 @@
         <title>Incluir Fornecedor</title>
     </head>
     <body>
-        <a href="listar-fornecedores.jsp">Listar<a/>
-        <hr>
     <center>
         <%
             try {
@@ -39,9 +38,9 @@
             <table border = "0">
                 <tr>
                     <td>&emsp;Nome Fantasia:</td>
-                    <td><input type="text" name="nomeF" ></td> &nbsp;
+                    <td><input type="text" name="nomeF"placeholder="Nome Empresa" ></td> &nbsp;
                     <td>&emsp;Razão Social:</td>
-                    <td><input type="text" name="razaoF" ></td> &nbsp;
+                    <td><input type="text" name="razaoF"placeholder="Razão Social" ></td> &nbsp;
                     <td>&emsp;CNPJ:</td>
                     <td><input type="text" name="cnpjF" pattern="\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}" placeholder="xx.xxx.xxx/xxxx-xx"></td> 
                 </tr>

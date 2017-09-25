@@ -85,8 +85,8 @@
                         <td>
                         <input type="text" name="nnome" placeholder="Nome Fornecedor"><br>
                         <input type="text" name="nrazao" placeholder="Razão Social"><br>
-                        <input type="text" name="ncnpj" placeholder="CNPJ - xx.xxx.xxx/xxxx-xx"><br>
-                        <input type="text" name="ntelefone" placeholder="Telefone - (xx)xxxx-xxxx"><br>
+                        <input type="text" name="ncnpj" placeholder="CNPJ - xx.xxx.xxx/xxxx-xx" pattern="\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}"><br>
+                        <input type="text" name="ntelefone" placeholder="Telefone - (xx)xxxx-xxxx" pattern="\(\d{2}\)\d{4}-\d{4}"><br>
                         <input type="text" name="nemail" placeholder="Email"><br>
                         <input type="text" name="nendereco" placeholder="Endereço"><br>&nbsp;&nbsp; &nbsp;
                         <input type="submit" name="salve" value="Salvar"> &nbsp;
