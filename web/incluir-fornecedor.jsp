@@ -50,7 +50,7 @@
                     <td>&emsp;Email:</td>
                     <td> <input type="text" name="emailF" placeholder="example@example.com" > </td>&nbsp;                              
                     <td>&emsp;Endereço:</td>
-                    <td><input type="text" name="enderecoF" placeholder="Endereço todo"> </td>
+                    <td><input type="text" name="enderecoF" placeholder="Endereço Completo"> </td>
                 </tr>
             </table>
             <br>
