@@ -10,15 +10,15 @@
     </head>
     <body>
     <center>
-        <h2>Lista de Forncedores</h2> 
+        <font color="#007BFF"> <h2>Lista de Forncedores</h2></font>
         <%
             try {
                 if (request.getParameter("remove") != null) {
                     int i = Integer.parseInt(request.getParameter("index"));
                     ControleF.getlist().remove(i);
                     response.sendRedirect(request.getRequestURI());
-                }else if(request.getParameter("salve")!= null){
-                int i = Integer.parseInt(request.getParameter("index"));
+                } else if (request.getParameter("salve") != null) {
+                    int i = Integer.parseInt(request.getParameter("index"));
                     String nome = request.getParameter("nnome");
                     String razao = request.getParameter("nrazao");
                     String cnpj = request.getParameter("ncnpj");
@@ -26,33 +26,33 @@
                     String telefone = request.getParameter("ntelefone");
                     String endereco = request.getParameter("nendereco");
                     ControleF altera = new ControleF();
-                   if(nome != ""){
-                       altera.alterar("nome", i, nome);
-                   }
-                   if(razao != ""){
-                       altera.alterar("razao", i, razao);
-                   }
-                   if(cnpj != ""){
-                       altera.alterar("cnpj", i, cnpj);
-                   }
-                   if(email != ""){
-                       altera.alterar("email", i, email);
-                   }
-                   if(telefone != ""){
-                       altera.alterar("telefone", i, telefone);
-                   }
-                    if(endereco != ""){
-                       altera.alterar("endereco", i, endereco);
-                   }
-                   
-                }  
+                    if (nome != "") {
+                        altera.alterar("nome", i, nome);
+                    }
+                    if (razao != "") {
+                        altera.alterar("razao", i, razao);
+                    }
+                    if (cnpj != "") {
+                        altera.alterar("cnpj", i, cnpj);
+                    }
+                    if (email != "") {
+                        altera.alterar("email", i, email);
+                    }
+                    if (telefone != "") {
+                        altera.alterar("telefone", i, telefone);
+                    }
+                    if (endereco != "") {
+                        altera.alterar("endereco", i, endereco);
+                    }
+
+                }
             } catch (Exception ex) {
         %>    
         <div>Erro ao Processar o Form</div>
         <%}%>
         <!Table com as informações dos Forncedores + Funcção de Alterar e Excluir>
         <br>
-        <table border = "1">
+        <table border = "2">
             <tr>
                 <th>Nome:</th>
                 <th>Razão Social:</th>
@@ -61,9 +61,9 @@
                 <th>Email:</th>
                 <th>Endereço:</th>
                 <th>Funções:</th>
-                <%if(request.getParameter("alterar")!= null){%>
+                    <%if (request.getParameter("alterar") != null) {%>
                 <th>Alteração:</th>
-                <%}%>
+                    <%}%>
             </tr>
             <%try {%>
             <%int i = 0;%>
@@ -81,17 +81,17 @@
                         <input type="submit" name="alterar" value="Alterar">
                         <input type="submit" name="remove" value="Excluir"><br>
                         </td>
-                        <%if(request.getParameter("alterar")!= null){%>
+                        <%if (request.getParameter("alterar") != null) {%>
                         <td>
-                        <input type="text" name="nnome" placeholder="Nome Fornecedor"><br>
-                        <input type="text" name="nrazao" placeholder="Razão Social"><br>
-                        <input type="text" name="ncnpj" placeholder="CNPJ - xx.xxx.xxx/xxxx-xx" pattern="\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}"><br>
-                        <input type="text" name="ntelefone" placeholder="Telefone - (xx)xxxx-xxxx" pattern="\(\d{2}\)\d{4}-\d{4}"><br>
-                        <input type="text" name="nemail" placeholder="Email"><br>
-                        <input type="text" name="nendereco" placeholder="Endereço"><br>&nbsp;&nbsp; &nbsp;
-                        <input type="submit" name="salve" value="Salvar"> &nbsp;
-                        <input type="submit" name="cancelar" value="Cancelar"> 
-                        <%}%>
+                            <input type="text" name="nnome" placeholder="Nome Fornecedor"><br>
+                            <input type="text" name="nrazao" placeholder="Razão Social"><br>
+                            <input type="text" name="ncnpj" placeholder="CNPJ - xx.xxx.xxx/xxxx-xx" pattern="\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}"><br>
+                            <input type="text" name="ntelefone" placeholder="Telefone - (xx)xxxx-xxxx" pattern="\(\d{2}\)\d{4}-\d{4}"><br>
+                            <input type="text" name="nemail" placeholder="Email"><br>
+                            <input type="text" name="nendereco" placeholder="Endereço"><br>&nbsp;&nbsp; &nbsp;
+                            <input type="submit" name="salve" value="Salvar"> &nbsp;
+                            <input type="submit" name="cancelar" value="Cancelar"> 
+                            <%}%>
                     </form>
                 </td>    
             </tr>    
@@ -105,6 +105,7 @@
             <%}%>
         </table>
     </center>
-        <center>
-</body>
+    <center>
+        <%@include file="WEB-INF/jspf/footer.jspf"%>
+    </body>
 </html>

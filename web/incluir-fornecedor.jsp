@@ -10,6 +10,7 @@
     </head>
     <body>
     <center>
+        <font color="#007BFF"><h2>Incluir Fornecedor</h2></font>
         <%
             try {
                 if (request.getParameter("Salvar") != null) {
@@ -33,7 +34,6 @@
         %>    
         <div>Erro ao processar o form</div>
         <%}%>
-        <h2>Incluir Fornecedor</h2>
         <form>
             <table border = "0">
                 <tr>
@@ -58,6 +58,7 @@
             <input type="reset" name="Limpar" value="Limpar Campos">
         </form>
     </center>
+    <%@include file="WEB-INF/jspf/footer.jspf"%>
 </body>
 </html>
 

@@ -92,7 +92,7 @@ public class ControleCl {
         } else if (escolha == "endereco") {
             list.get(i).setEndereco(change);
         }
-        
+
     }
 
 }
